@@ -1,11 +1,12 @@
 require 'pry'
 class Transfer
 
-  attr_accessor :sender
+  attr_reader :status
 
   
   def initialize(transfer, sender, reciver)
-    binding.pry
+    #binding.pry
+    @sender = @sender
     @transfer = @transfer
     @status = "pending"
   end
