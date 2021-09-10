@@ -5,7 +5,7 @@ class Transfer
 
   
   def initialize(transfer, sender, reciver)
-    binding.pry
+    #binding.pry
     @transfer = @transfer
     @status = "pending"
   end
