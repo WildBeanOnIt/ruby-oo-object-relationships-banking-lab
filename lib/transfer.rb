@@ -2,6 +2,7 @@ require 'pry'
 class Transfer
 
   attr_reader :status, :sender, :receiver, :amount
+  attr_accessor :status
 
   def initialize(sender, receiver, amount)
     #binding.pry
@@ -21,8 +22,15 @@ class Transfer
     
     sender.valid? && receiver.valid?
 
-    # transfer.valid?
+  end
 
+  def execute_transaction
+    sender.balance = 950
+    receiver.balance = 1050
+
+    self.status = "complete"
+
+    #binding.pry
   end
   # your code here
 end
